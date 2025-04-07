@@ -1,3 +1,13 @@
+import requests
+
+proxies = {
+    "http": "http://friendstv4113:Vu4DiHxrgb@103.172.85.194:50100",
+    "https": "http://friendstv4113:Vu4DiHxrgb@103.172.85.194:50100",
+}
+
+response = requests.get("http://example.com", proxies=proxies)
+print(response.text) 
+
 # Use a Python 3.9.6 Alpine base image
 FROM python:3.9.6-alpine3.14
 
