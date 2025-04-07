@@ -33,5 +33,9 @@ RUN wget -q https://github.com/axiomatic-systems/Bento4/archive/v1.6.0-639.zip &
 
 RUN pip install --no-cache-dir -r requirements.txt
 
+RUN python download_with_proxy.py
+
+RUN pip install requests
+
 # Set the command to run the application
 CMD ["sh", "-c", "gunicorn app:app & python3 main.py"]
